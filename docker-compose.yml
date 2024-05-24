@@ -5,6 +5,14 @@ services:
     image: ghcr.io/danerieber/harmon-react:latest
     ports:
       - "3000:3000"
+    environment:
+      - SERVER_HOST
+      - SERVER_PORT
+      - SERVER_USES_HTTPS
+      - PEER_SERVER_HOST
+      - PEER_SERVER_PORT
+      - PEER_SERVER_PATH
+      - PEER_CONFIG
 
   server:
     image: ghcr.io/danerieber/harmon-server-go:latest
