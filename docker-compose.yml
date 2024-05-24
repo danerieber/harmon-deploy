@@ -18,6 +18,8 @@ services:
     image: ghcr.io/danerieber/harmon-server-go:latest
     ports:
       - "8080:8080"
+    volumes:
+      - $PWD/data:/app/data
 
   peerjs:
     image: peerjs/peerjs-server
