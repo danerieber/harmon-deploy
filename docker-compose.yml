@@ -1,0 +1,17 @@
+name: harmon
+
+services:  
+  webapp:
+    image: ghcr.io/danerieber/harmon-react:latest
+    ports:
+      - "3000:3000"
+
+  server:
+    image: ghcr.io/danerieber/harmon-server-go:latest
+    ports:
+      - "8080:8080"
+
+  peerjs:
+    image: peerjs/peerjs-server
+    ports:
+      - "9000:9000"
